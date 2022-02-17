@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <script>
+            var temp = 0;
+        </script>
+
+        <style>
+            #a{
+                font-size: 70px;
+                font-weight: bold;
+            }
+
+            body{
+                
+                background-image: url("abc.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+
+            div{
+                text-align: center;
+                border-style: solid;
+                padding: 50px 100px 50px 100px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size : 30px;
+            }
+
+            input{
+                padding: 10 10 10 10;
+                font-size: 20px;
+                background-color:cyan;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Counter Mini Project</h1>
+        
+        
+        <div>
+            <h2 style="color: blue;">Counter</h2>
+
+            <p id="a" ></p>
+
+            <input type="button" value="Add Counter" onclick="add()">&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Lower Counter" onclick="sub()">
+
+        </div>
+
+        <script>
+
+            document.getElementById("a").innerHTML ="0";
+
+            function add()
+            {
+                temp+=1;
+
+                if(temp>0)
+                    document.getElementById("a").style.color ="#006400";
+
+                if(temp==0)
+                    document.getElementById("a").style.color = "#000000";
+
+                document.getElementById("a").innerHTML =""+ temp;
+            }
+
+            function sub(){
+                temp-=1;
+
+                if(temp<0)
+                    document.getElementById("a").style.color ="#FF0000";
+
+                if(temp==0)
+                    document.getElementById("a").style.color = "#000000";
+
+
+                document.getElementById("a").innerHTML =""+ temp;
+            }
+
+        </script>
+    </body>
+</html>
